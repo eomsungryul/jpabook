@@ -1,6 +1,8 @@
 package jpabook.jpashop.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -9,37 +11,75 @@ import javax.persistence.Table;
 //@Entity(name = "Member") // 다른 패키지의 같은 이름의 클래스가 있는 경우 하나는 다른 이름을 써줘야 할 때 정도 사용.
 // @Table(name = "USER") 테이블 서로 다를 경우 매핑
 public class Item {
-	@Id
-	// @Column(name = "id") 칼럼명 서로 다를 경우 매핑
-	private Long id;
+	
+	@Id @GeneratedValue
+	@Column(name = "ITEM_ID")
+	private Long Id;
 	private String name;
-	//private int age;
-	//private int gogo;
-	// Getter, Setter …
+	private int price;
+	private int stockQuantity;//잔고
 	
-	public Item() {
-		
-	}
 	
-	public Item(Long id, String name) {
-		this.id = id;
-		this.name = name;
-	}
-	
-
 	public Long getId() {
-		return id;
+		return Id;
 	}
-
 	public void setId(Long id) {
-		this.id = id;
+		Id = id;
 	}
-
 	public String getName() {
 		return name;
 	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public int getStockQuantity() {
+		return stockQuantity;
+	}
+	public void setStockQuantity(int stockQuantity) {
+		this.stockQuantity = stockQuantity;
+	}
+	
+	
+	
+	
+	
+//	@Id
+//	// @Column(name = "id") 칼럼명 서로 다를 경우 매핑
+//	private Long id;
+//	private String name;
+//	//private int age;
+//	//private int gogo;
+//	// Getter, Setter …
+//	
+//	public Item() {
+//		
+//	}
+//	
+//	public Item(Long id, String name) {
+//		this.id = id;
+//		this.name = name;
+//	}
+//	
+//
+//	public Long getId() {
+//		return id;
+//	}
+//
+//	public void setId(Long id) {
+//		this.id = id;
+//	}
+//
+//	public String getName() {
+//		return name;
+//	}
+//
+//	public void setName(String name) {
+//		this.name = name;
+//	}
 }
