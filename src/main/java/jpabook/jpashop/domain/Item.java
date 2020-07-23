@@ -4,18 +4,25 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity //JPA가 관리하는 객체
-//@Table(name = "MBR") // MBR이라는 테이블과 매핑된다.
-//@Entity(name = "Member") // 다른 패키지의 같은 이름의 클래스가 있는 경우 하나는 다른 이름을 써줘야 할 때 정도 사용.
-// @Table(name = "USER") 테이블 서로 다를 경우 매핑
+@Entity //JPA媛� 愿�由ы븯�뒗 媛앹껜
+//@Table(name = "MBR") // MBR�씠�씪�뒗 �뀒�씠釉붽낵 留ㅽ븨�맂�떎.
+//@Entity(name = "Member") // �떎瑜� �뙣�궎吏��쓽 媛숈� �씠由꾩쓽 �겢�옒�뒪媛� �엳�뒗 寃쎌슦 �븯�굹�뒗 �떎瑜� �씠由꾩쓣 �뜥以섏빞 �븷 �븣 �젙�룄 �궗�슜.
+// @Table(name = "USER") �뀒�씠釉� �꽌濡� �떎瑜� 寃쎌슦 留ㅽ븨
 public class Item {
-	@Id
-	// @Column(name = "id") 칼럼명 서로 다를 경우 매핑
+	@Id @GeneratedValue
+	@Column(name = "member_id")
 	private Long id;
 	private String name;
+	
+	
+	
+	// @Column(name = "id") 移쇰읆紐� �꽌濡� �떎瑜� 寃쎌슦 留ㅽ븨
+	//private Long id;
+	//private String name;
+	
 	//private int age;
 	//private int gogo;
-	// Getter, Setter …
+	// Getter, Setter ��
 	
 	public Item() {
 		
