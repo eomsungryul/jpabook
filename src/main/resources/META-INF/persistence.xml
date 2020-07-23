@@ -10,7 +10,9 @@
 			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
 			<property name="javax.persistence.jdbc.user" value="sa" />
 			<property name="javax.persistence.jdbc.password" value="" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/test" />
+<!-- 			<property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/test" /> -->
+<!-- 			실습 예제를 위한 새로운  DB 생성 -->
+			<property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/jpashop" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" /><!-- 데이터베이스 방언 (SQL표준을 지키지않는 특정 데이터베이스만의 고유한 기능) -->
 <!-- 			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" /> -->
 <!-- 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect " /> -->
