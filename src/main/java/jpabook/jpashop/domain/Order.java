@@ -8,6 +8,8 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity //JPA가 관리하는 객체
@@ -24,6 +26,10 @@ public class Order {
 	
 	//객체지향적인 모습으로, 특정 주문을 한 멤버를 찾는 방법
 	private Member member;
+	
+	@OneToOne
+	@JoinColumn(name = "DELIVERY_ID")
+	private Delivery delivery;
 	
 	public Member getMember() {
 		return member;
